@@ -46,15 +46,17 @@ ul {
     text-decoration: none;
 }
 
-.section {
+.section, .hero{
   padding-bottom: 120px;
+  padding-top: 120px;
   
 }
 
-.container {
+.container, .hero.container {
     margin: 0 auto;
     max-width: 1158px;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     
 }
 
@@ -149,6 +151,7 @@ img {
 .nav-flex {
     display: flex;
     justify-content: space-between;
+    text-align: center;
      
 }
 
@@ -161,9 +164,7 @@ img {
 
 /* hero */
  .hero {
-    margin-bottom: 120px;
-    
-    text-align: center;
+  
 }
 
 .hero .container {
@@ -171,17 +172,23 @@ img {
 }
 
 .hero-title{
-    padding: 188px 316px 48px;
-    
+    max-width: 496px;
+    margin-right: auto;
     font-size: 56px;
     line-height: 1.07;
     color: var(--white-color);
     letter-spacing: 0.02em;
+    text-align: center;
+    
 }
 .hero-button{
-    display: inline-block;
-    margin-bottom: 188px;
+    display: block;
+    
+    min-width: 169px;
+
+    height: 56px;
     padding: 16px 32px;
+    border: none;
     border-radius: 4px;
     
     color: var(--white-color);
@@ -206,7 +213,7 @@ img {
 }
 
 .section .section-title {
-    padding-bottom: 72px;
+    margin-bottom: 72px;
     
     font-weight: 700;
     font-size: 36px;
@@ -388,7 +395,7 @@ img {
 /* FOOTER */
 
 .footer .container {
-    padding-top: 101px;
+    padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 156px;
     
@@ -396,6 +403,12 @@ img {
     color: var(--white-color);
     
 }
+.footer .logo {
+display: inline-block;
+margin-bottom: 16px;
+}
+
+
 
 .footer-text {
     width: 264px;
