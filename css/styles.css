@@ -13,11 +13,13 @@
     --white-color:#fff;
     --hover-color:#404BBF;
     --team-bg-color:#F4F4FD;
+    --border-header-color: #E7E9FC;
     
 
 }
 
 body {
+    margin: 0;
     background-color:var(--white-color);
     color: var(--primary-text-color);
     font-family: Roboto, sans-serif;
@@ -27,13 +29,45 @@ body {
 
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
 .list {
+    margin: 0;
     list-style: none;
+
 }
 .link {
     text-decoration: none;
 }
+
+.section {
+  padding-bottom: 120px;
+  
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1158px;
+    padding: 0 15px;
+    
+}
+
 /* Header */
+
+.header {
+    border-bottom: 1px solid var(--border-header-color);
+}
+
+.header .container {
+    padding-left: 156px;
+    padding-right: 156px;
+}
 .logo {
     color: var(--secondary-text-bg-color);
     font-family: Raleway, sans-serif;
@@ -45,17 +79,40 @@ body {
 }
 
 .logo {
-color:var(--accent-color);
+    margin-right: 76px;
+
+    color:var(--accent-color);
 
 }
 .logo .span {
     color: var(--secondary-text-bg-color);
 }
- /* Links */
+ 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
+/****** Links *************/
+
+ .nav-list {
+    display: flex;
+ }
+ 
+
+.nav-item:not(:last-child) {
+    margin-right: 40px;
+}
 .nav-list .item {
    color:var(--secondary-text-bg-color);
    font-weight: 500;
+}
+
+.nav-list .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .nav-list .link:hover, 
@@ -66,7 +123,18 @@ color:var(--accent-color);
 /* address */
 
 .address {
-    font-style: normal;  
+    font-style: normal;
+}
+
+.address-list {
+    display: flex;
+       
+} 
+
+.address-list .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .address-list .address-point {
@@ -78,18 +146,44 @@ color:var(--accent-color);
     color: var(--hover-color);
 }
 
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+     
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+
 /* hero */
  .hero {
+    margin-bottom: 120px;
+    
+    text-align: center;
+}
+
+.hero .container {
     background-color:var(--secondary-text-bg-color);
- }
+}
+
 .hero-title{
+    padding: 188px 316px 48px;
+    
     font-size: 56px;
     line-height: 1.07;
     color: var(--white-color);
-    text-align: center;
     letter-spacing: 0.02em;
 }
 .hero-button{
+    display: inline-block;
+    margin-bottom: 188px;
+    padding: 16px 32px;
+    border-radius: 4px;
+    
     color: var(--white-color);
     background-color:var(--accent-color) ;
     font-family: inherit;
@@ -98,6 +192,7 @@ color:var(--accent-color);
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+
 }
 
 .hero-button:hover, 
@@ -111,28 +206,65 @@ color:var(--accent-color);
 }
 
 .section .section-title {
-font-weight: 700;
-font-size: 36px;
-line-height: 1.11;
-letter-spacing: 0.02em;
-text-align: center;
-text-transform: capitalize
+    padding-bottom: 72px;
+    
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize
 }
 
 /* Features */
 
+.features {
+    display: flex;
+    
+}
+ 
 .features .title {
+    margin-bottom: 8px;
+    
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
 }
+.feature-list {
+    width: calc((100% - 3*24px) /4);
+    margin-right: 24px;
+}
+
+.feature-list:last-child {
+    margin-right: 0;
+}
+
+/*ABOUT*/
+
+.about {
+    display: flex;
+}
+
+.about-img {
+    width: calc((100% - 48px) / 3);
+    margin-right: 24px;;
+}
+ .about-img:last-child {
+    margin-right: 0;
+ }
+
 
 /* TEAM */
 
-.team {
+.team .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    
     background-color: var(--team-bg-color);
+    
 }
+
 .team-item {
     background-color: var(--white-color);
     font-size: 16px;
@@ -140,18 +272,52 @@ text-transform: capitalize
 }
 
 .team-item .title {
+    padding-top: 32px;
+    padding-bottom: 8px;
+    
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
 }
 
+.team .description {
+    padding-bottom: 32px;
+}
+
+.team {
+    display: flex;
+    
+}
+ 
+.team-item {
+    width: calc((100% - 3*24px) / 4); 
+    margin-right: 24px;
+}
+
+.team-item:last-child {
+    margin-right: 0;
+}
+/* *****PORTFOLIO******** */
+
+.filter-tabs {
+    margin-top: 96px;
+    display: flex;
+    justify-content: center;
+}
+
 .filter-tab {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border-color: transparent;
+
+
     color:var(--accent-color) ; 
     background-color: var(--team-bg-color);
     text-decoration: none;
     font-family: inherit;
-     font-size: inherit;
+    font-size: inherit;
     line-height: inherit;
     font-style: inherit;
     font-weight: 500;
@@ -163,25 +329,79 @@ text-transform: capitalize
     color: var(--white-color);
     background-color: var(--hover-color);
 }
- 
-.filter-list .title {
-font-weight: 500;
-font-size: 20px;
-line-height: 1.2;
-letter-spacing: 0.02em;
+
+.filter-btn:not(:last-child) {
+    margin-right: 24px;
 }
+
+.filter-list {
+    padding-top: 72px;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.filter-item {
+    width: calc (( 100% - 48px) / 3);
+    margin-right: 24px;
+    margin-bottom: 48px;
+   
+}
+
+.filter-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+
+
+.filter-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+
+
+
+.filter-list .title {
+    padding-top: 32px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
 .filter-list .description {
+    padding-bottom: 32px;
+    padding-left: 16px;
     color: var(--primary-text-color);
 }
-/* Footer */
 
-.footer {
+.filter-content {
+    border-left: 1px solid var(--border-header-color);
+    border-bottom: 1px solid var(--border-header-color);
+    border-right: 1px solid var(--border-header-color);
+}
+
+/* FOOTER */
+
+.footer .container {
+    padding-top: 101px;
+    padding-bottom: 100px;
+    padding-left: 156px;
+    
     background-color: var(--secondary-text-bg-color);
     color: var(--white-color);
+    
 }
 
 .footer-text {
+    width: 264px;
     color: var(--team-bg-color);
+    
+
     }
 .footer .span {
     color: var(--team-bg-color);
