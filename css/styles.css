@@ -67,8 +67,7 @@ ul {
 }
 
 .header .container {
-    padding-left: 156px;
-    padding-right: 156px;
+    align-items: center;
 }
 .logo {
     color: var(--secondary-text-bg-color);
@@ -164,6 +163,8 @@ img {
 
 /* hero */
  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
   
 }
 
@@ -278,18 +279,24 @@ img {
 
 }
 
-.team-item .title {
-    padding-top: 32px;
-    padding-bottom: 8px;
+.team-content {
+    padding: 32px 16px;
+
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-content .title {
+    margin-bottom: 8px;
     
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    text-align: center;
 }
 
-.team .description {
-    padding-bottom: 32px;
+.team-content .description {
+    text-align: center;
 }
 
 .team {
@@ -394,15 +401,18 @@ img {
 
 /* FOOTER */
 
+
 .footer .container {
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 156px;
-    
+        
     background-color: var(--secondary-text-bg-color);
     color: var(--white-color);
     
 }
+
+
 .footer .logo {
 display: inline-block;
 margin-bottom: 16px;
