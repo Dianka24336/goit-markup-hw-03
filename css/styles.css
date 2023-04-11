@@ -71,7 +71,9 @@ ul {
     align-items: center;
 }
 .logo {
-    color: var(--secondary-text-bg-color);
+    margin-right: 76px;
+
+    color:var(--accent-color);
     font-family: Raleway, sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -80,12 +82,7 @@ ul {
     text-transform: uppercase;
 }
 
-.logo {
-    margin-right: 76px;
 
-    color:var(--accent-color);
-
-}
 .logo .span {
     color: var(--secondary-text-bg-color);
 }
@@ -166,10 +163,7 @@ img {
  .hero {
     padding-top: 188px;
     padding-bottom: 188px;      
-}
 
-.hero .container {
-       
     background-color:var(--secondary-text-bg-color);
 }
 
@@ -229,6 +223,19 @@ img {
 
 /* Features */
 
+.visually-hidden { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    border: 0; 
+    padding: 0; 
+    white-space: nowrap; 
+    clip-path: inset(100%); 
+    clip: rect(0 0 0 0); 
+    overflow: hidden; 
+} 
+
 .features {
     display: flex;
     
@@ -268,10 +275,8 @@ img {
 
 /* TEAM */
 
-.team .container {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    
+.teams {
+
     background-color: var(--team-bg-color);
     
 }
@@ -410,20 +415,21 @@ img {
     padding-top: 100px;
     padding-bottom: 100px;
 
+    background-color: var(--secondary-text-bg-color);
+
 }
 
 .footer .container {
-    padding-left: 156px;
-        
-    background-color: var(--secondary-text-bg-color);
-    color: var(--white-color);
-    
+     color: var(--white-color);
+ 
 }
 
 
 .footer .logo {
-display: inline-block;
-margin-bottom: 16px;
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-right: 0;
+    
 }
 
 
@@ -431,9 +437,9 @@ margin-bottom: 16px;
 .footer-text {
     width: 264px;
     color: var(--team-bg-color);
-    
 
-    }
+}
+
 .footer .span {
     color: var(--team-bg-color);
 }
